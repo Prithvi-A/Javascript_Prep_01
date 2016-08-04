@@ -1,0 +1,18 @@
+/* Functions Page Styles */
+
+span {
+	font-weight: bold;
+	background-color: yellow;
+}
+.noun {
+	color: green;
+}
+.ajd {
+	color: red;
+}
+.verb {
+	color: blue;
+}
+.adverb {
+	color: red;
+}

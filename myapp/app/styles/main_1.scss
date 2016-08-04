@@ -1,0 +1,88 @@
+// Apple Financing page.
+$icon-font-path: '../fonts/';
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import 'base';
+
+$divider: #d6d6d6;
+.page-financing {
+
+	.content {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+	.section-hero {
+		text-align: center;
+		.content {
+			border-bottom: 1px solid $divider;
+		}
+		
+		.intro {
+			@include center-paragraph(680px);
+			padding-top: 20px;
+			padding-bottom: 40px;
+		}
+
+		.icon-links {
+			display: inline-block;
+		}
+		.caption {
+			color: #000;
+		}
+		.nav-icon {
+			width: 100px;
+			height: 100px;
+			margin: 0 auto;
+			background-repeat: no-repeat;
+		}
+		.business-icon {
+			background-image: url("../images/icon_business_lg.png");
+		}
+		.education-icon {
+			background-image: url("../images/icon_education_lg.png");
+			width: 120px;
+
+		}
+		.consumer-icon {
+			background-image: url("../images/icon_consumer_lg.png");
+			width: 125px;
+		}
+	}
+
+	.section-business {
+		.intro {
+			@include center-paragraph(773px);
+			text-align: center;
+		}
+		.business-hero-image {
+			margin-top: 58px;
+			background-image: url("../images/business_hero.png");
+			background-repeat: no-repeat;
+			width: 980px;
+    		height: 500px;
+		}
+		
+	}
+
+	.section-financing-that-fits {
+
+	}
+
+	.section-next-steps {
+
+	 &.last {
+
+	 }
+
+	}
+
+	.section-consumer {
+		
+	}
+
+}
+

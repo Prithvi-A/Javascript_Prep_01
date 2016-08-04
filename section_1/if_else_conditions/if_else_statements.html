@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>if/esle code blocks</title>
+</head>
+<body>
+
+	<script>
+		/**
+		* Exercise 1:
+		*
+		* 1. Use the console to write an expression which compares two strings and produces a true value.
+		* 2. Write an expression comparing two strings which produces a false value.
+		* 3. Determine whether string comparison is case sensitive
+		* 4. Determine whether string comparison is space sensitive (does adding extra spaces change the outcome?)
+		* 5. Write an expression that considers the equivalency a string and a number and produces a false value
+		* 6. Write an expression that considers the equivalency a number and a string and produces a true value
+		*/
+		console.log("Welcome to Boolean & Comparators"); 
+		console.log(typeof "hello" == typeof "world");
+		console.log("universal" == "studios");
+		console.log("firstname" == "FirstName");
+		console.log("Goal" == "G o a l");
+		console.log("5"  === 5);
+		console.log("What?");
+		console.log(typeof "hello" ==  typeof "12345"); 
+		console.log("###############################"); 
+		console.log("'CONDITIONAL STATEMENTS'");
+	
+	/**
+	* Exercise 2: CONDITIONAL STATEMENTS
+	*/
+	
+	//Write a if statement that always runs its code block
+	if(true) {
+		console.log("oh yeeeeahhh!!");
+	}
+
+	//Write a if statement that never runs its code block
+	if(false) {
+		console.log("wait, where am I?");
+	}
+	//Write a statement that logs a message of encouragement if a visitor, when prompted, responds that they are sad.
+	if(prompt("How are you doing?") === "sad") {
+		console.log("It\'s a beautiful day, come on cheer up!");
+	}
+		
+	//Write a statement that alerts a warning if a visitor, when prompted, does not guess that the secret number is 3.
+	if(prompt("Guess the secret number") != 3) {
+		console.log("Oops! You're pretty close, but not there yet.")
+	}
+
+	//Prompt the visitor to enter a password when they visit your site. If it is correct, welcome them. Otherwise, direct them elsewhere using this line of code:
+	if(prompt("Enter a password to visit this site") == "xyz") {
+		console.log("Welcome to this site! Happy browsing.")
+	} else {
+		window.location = "http://www.google.com";
+	}
+	
+	</script>
+</body>
+</html>

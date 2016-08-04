@@ -1,0 +1,30 @@
+.one {
+	background-color: #000;
+	color: #fff;
+}
+.two {
+	background-color: #ddd;
+}
+.box {
+	margin: 0 auto;
+	padding: 5px 10px;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	line-height: 6em;
+}
+.fizz {
+	background-color: yellow;
+	color: #000;
+	border: 1px solid green;
+}
+.buzz {
+	border: 1px solid orange;
+	background-color: black;
+	color: #fff;
+}
+.fizzbuzz {
+	border: 1px solid #fff;
+	background-color: red;
+	color: #fff;
+}

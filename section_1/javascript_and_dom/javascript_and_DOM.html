@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS Enabled Web Page</title>
+</head>
+<body>
+	<h1>My First Javascript Enabled Web Page</h1>
+
+	<h2>Exercise : Use the console to retrieve(I am H2)</h2> 
+	<div>		
+		<h3 id="primary">Type the following in the console. (I am H3 with id Primary)</h3>
+		<p class="important">Placeholder text with class important</p>
+
+		<ul>
+			<li>document.querySelector('h2').textContent = "Behold! For I am a mighty web document!";</li>
+			<li>var big_shot = document.querySelector('#primary');</li>
+			<li>big_shot.textContent = "Flippin' heck, I'm by far the most important element around!";</li>
+			<li>document.querySelector('.important').textContent = "Do all .important elements change or only one?";</li>
+		</ul>
+	</div>
+	<script>
+	// Exercise 1: My First JavaScript Enabled Web Page
+	    console.log("Exercise 1: My First JavaScript Enabled Web Page");
+		alert('This site is extremely awesome! Enjoy with caution!');
+		
+		var name = prompt('What is your name?');
+		alert("Hello "+ name + "!");
+
+  		console.log("This is mostly used for debugging.", "We'll learn how to write directly into the HTML document a little later.");
+	
+	// Exercise 2: Ask the user what their favorite sports team is. Secretly log a message trash-talking their team in the console.
+	    console.log("Exercise 2: Ask the user what their favorite sports team is. Secretly log a message trash-talking their team in the console.");
+		var sportsTeam = prompt('What is your favourite sports team?');
+		console.log("After following them for so long the " + sportsTeam + " are falling behind this season. They suck!");
+
+
+	/** 
+	*	Exercise 3:
+	*	1. Open up one of your previous HTML projects
+	*	2. Use the console to retrieve the first element that matches a particular CSS selector.
+	*	3. View that element's current textContent from the console.
+	*	4. Set that element's textContent to a new string.
+	*	5. Do this exercise once for each selector type shown above.
+	*/
+		console.log("Excercise 3: Type in the commands in the html in the console.");
+		console.log("Once you are completed, refresh your page, all the commands disappear.");
+		console.log("Uncomment line 48-51 under Exercise 3 inside the script tag. Now the changes persist even when the page is loaded.");
+		// document.querySelector('h2').textContent = "Behold! For I am a mighty web document!"
+		// var big_shot = document.querySelector('#primary')
+		// big_shot.textContent = "Flippin' heck, I'm by far the most important element around!"
+		// document.querySelector('.important').textContent = "Do all .important elements change or only one?"
+
+	/**
+	*	Note: the above code retains the changes even after the page is loaded. 
+	*	But when the code is entered via the console, it disappears after the page is loaded. 
+	*/	
+
+	</script>
+</body>
+</html>

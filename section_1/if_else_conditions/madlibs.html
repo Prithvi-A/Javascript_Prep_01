@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mad Libs!</title>
+</head>
+<body>
+	<h1>Mad Libs!</h1>
+	<p>
+		<span id="noun1">Akira</span> is super famous in our community. Being a true ambassador of <span id="adjective2">Grace and courage</span>, and qualities like <span id="verb3">perseverence</span> glows in the presence of this person.
+	</p>
+	<script>
+		/**
+		* Instructions : Mad Libs!
+		* 1. Create a "Mad Libs" web page. It should tell a story, leaving empty <spans>'s with id attributes of 'noun1', 'adjective2', 'verb3', etc. Practice
+		*    using the console along with `querySelector` and `textContent` to fill in the missing information one at a time.
+		* 2. After doing this manually, put these operations into a script tag, and use variables to store each word to be filled in before placing it into the *    web page, so that the template will be filled out automatically each time the page loads, but the information will be easy to change later.
+		* 3. Finally, prompt the visitor repeatedly to provide their own mad libs words. Save their responses as variables and then place those variables into *    the page to make a crazy story for them.
+		*/
+
+		var noun = prompt('Write a noun of your choice.');
+		document.querySelector('#noun1').textContent = noun;
+	
+		var adjective = prompt('Write a adjective of your choice.');
+		document.querySelector('#adjective2').textContent = adjective;
+	
+		var verb = prompt('Write a verb of your choice.');
+		document.querySelector('#verb3').textContent = verb;
+
+
+	</script>
+</body>
+</html>

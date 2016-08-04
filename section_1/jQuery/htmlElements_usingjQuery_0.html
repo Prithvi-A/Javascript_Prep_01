@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Creating HTML elements using jQuery</title>
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+	<script>
+		var new_div = $('<div class="important">Got a a new div coming in here!</div>');
+
+		new_div.css('color', 'red').attr('id', 'primary').text("Hi! I'm new here.");
+
+		$('body').append(new_div);
+
+		new_div.fadeOut(2008).delay(1000).fadeIn().slideUp(4000);
+	</script>
+</body>
+</html>

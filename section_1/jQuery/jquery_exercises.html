@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+</head>
+<body>
+	<div class="first_exercise">
+		<h2></h2>
+		<img class="firstImage" alt="" width="200" height="200" src=""/>
+		<p id="notification"></p>
+		<div class="container"></div>
+	</div>
+	<div id="everything">
+      <h1>A heading!</h1>
+      <p>Here's some text!</p>
+      <p>Here's a second set of text!</p>
+      <img class="inside" src="" alt="">
+      <div class="holder">
+          <ul>
+              <li>List Item 1</li>
+              <li>List Item 2</li>
+              <li>List Item 3</li>
+          </ul>
+      </div>
+      <div class="holder">
+          <ol>
+              <li>List Item 4</li>
+              <li>List Item 5</li>
+              <li>List Item 6</li>
+          </ol>
+      </div>
+      <div id="change-me">This part needs to change!</div>
+      <div id="secret">We should hide this!</div>
+  </div>
+
+  <div id="effects_container">
+  	 <h2 class="effects">jQuery Effects</h2>
+  	 <div id="thing">
+  	 	Plaid austin intelligentsia, XOXO lo-fi slow-carb green juice +1 aesthetic lomo flannel poutine four loko kinfolk brooklyn. YOLO portland authentic, keytar jean shorts leggings distillery pitchfork pop-up meditation kombucha forage roof party post-ironic. 
+  	 </div>
+  	 <p id="message">Here is a sliding Message</p>
+  	 <div class="alert">Fixie fanny pack leggings, actually chambray pariatur +1 you probably haven't heard of them cronut. In everyday carry williamsburg sed, pabst cillum artisan synth biodiesel. PBR&B eiusmod selvage, cardigan cupidatat sartorial neutra try-hard direct trade keytar synth heirloom 8-bit kogi aesthetic. Vero chicharrones post-ironic chambray. Semiotics asymmetrical bespoke disrupt kogi, cardigan flannel hoodie elit proident chillwave roof party. Knausgaard mlkshk ennui, duis mollit vero officia skateboard eu intelligentsia. Pickled hammock qui, roof party voluptate dreamcatcher authentic heirloom.</div>
+  	 <p id="secret">This is Magical!</p>
+  	 <ol>
+  	 	<li class="effect">List 7</li>
+  	 	<li class="effect">List 8</li>
+  	 	<li class="effect">List 9</li>
+  	 </ol>
+  	 <p class="comments">No Comments</p>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-2.1.1.js"></script>	
+  <script>
+    $(document).ready(function(){
+
+      // Exercise 1:
+      var firstExercise = function() {  
+        $('body').css('background-color','red');
+        $('img.firstImage').attr('src', 'http://i.imgur.com/nWGCwiE.gif');
+        $('h2').text('hello');
+        $('#notification').html('<div class="alert">Hold on!<b>an error</b> has occured!</div>');
+        $('.container').append("<p>What's the difference between <i>.append()</i> and .html()?</p>");
+      };
+      firstExercise();
+
+
+    // Exercise :  Testing Experssions
+      var testingExpressions = function() {
+        $('h1').css('color', 'blue');
+        $('body').css('background', 'red');
+        $('#everything').css('font-size', '20px');
+        $('.holder').css('border','1px solid black');
+        $('ul>li').css('font-weight', 'bold');
+        $('p:nth-child(2)').css('color', 'green');
+        $('#secret').css('display','none');
+        $('#secret').css('display','block');
+        $('#change-me').append('End of text.');
+        $('#change-me').html('<p>Paragraph 1 </p><p>Paragraph 2</p>');
+        $('#change-me').append('<p>Adding a new Paragraph</p>');
+        $('li').text('Adding a new sentence.');
+        $('li').append('Appending a new sentence.');
+        
+        var content_appending_the_container = '<ol><li>Appending Item 1</li><li>Appending Item 2</li><li>Appending Item 3</li></ol>';
+
+        $('#everything').append(content_appending_the_container);
+    };
+    testingExpressions();
+
+
+    // Exercise : Theme Changer
+    var themeChanger = function () {
+      var input_color = "blue";
+
+      //Validate the input from the user
+      $('h1').text("You have selected the " + input_color + " theme!");     
+
+      var light_color = "light" + input_color; // lightgreen
+      var dark_color = "dark" + input_color; //darkgreen
+
+      $('ol>li').css('color', input_color ); //green
+      $('h1').css('background-color', light_color); // lightgreen
+      $('#change-me').css('color', dark_color); //darkgreen
+
+      if(input_color == 'blue') {
+      $('img.inside').attr('src', 'http://i.imgur.com/iSyMl1p.jpg');
+      } else if(input_color == 'red') {
+      $('img.inside').attr('src', 'http://i.imgur.com/3U0soiK.png');
+      } else if(input_color == 'green') {
+      $('img.inside').attr('src', 'http://i.imgur.com/eucAMTA.jpg');
+      }
+    };
+    themeChanger();
+
+    // jQuery Effects 
+    var effectsJquery = function() {
+      $('h2.effects').show();
+      $('p#secret').hide();
+      $('ol li.effect').fadeIn(5000);
+      $('p .comments').fadeOut();
+      $('div#thing').slideDown();
+      $('#message').slideUp("slow");
+      $('.alert').slideToggle();
+    };
+    effectsJquery();
+
+  });
+  </script>
+</body>
+</html>

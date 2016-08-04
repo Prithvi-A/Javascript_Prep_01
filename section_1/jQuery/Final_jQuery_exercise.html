@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Exercise: Construct an HTML document entirely using jQuery</title>
+	<style>
+		img {
+			position: fixed;
+		}
+	</style>
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+	<script>
+		// create a new <div> tag 
+		var new_div = $('<div></div>');
+
+		//with an id of container and 
+		new_div.css({'width':'800px', 'height':'800px', 'border':'1px solid black', 'text-align':'center'}).attr('id', 'container').text('Hello, This is me!');
+
+		//append it to the body
+		$('body').append(new_div);
+
+		// create a new <img> tag and 
+		var image_Container = '<img class="image0" src="" alt="">';
+
+		//place it inside #container
+		$('#container').append(image_Container);
+
+		//Give the img a src attribute with the URL of a funny picture 
+		$('img').attr('src','http://bit.ly/1o5d0Vl');
+		
+		// change the image to be really small
+		$('img').width(100).height(100);
+
+		// change the image to be really big
+		$('img').width(300).height(300);
+
+		// create an array to store elements of the page/images
+		var imageArray = [];
+		
+		// Now add a few more images and some text captions and use various jQuery effects to make them dance around!
+		
+		var image_Container1 = '<img id="image1" src="http://i.imgur.com/qOOUTVm.jpg" alt="" width="200" height="200">';
+	
+
+		var image1 = $('#container').append(image_Container1);
+
+		var image_Container2 = '<img id="image2" src="http://i.imgur.com/6LRBlb9.gif" alt="" width="200" height="200">';
+
+	
+		var image2 = $('#container').append(image_Container2);
+
+		imageArray.push(image1,image2);
+
+		/* Use Math.random() and position:fixed to randomize the 
+		*  placement of the various HTML elements on your page. 
+		*/
+
+		// Generates random width
+		var width = (Math.random() * 400) + window.innerWidth;
+
+		// Generates random height
+		var height = (Math.random() * 400) + window.innerHeight;
+		
+		// Every time you hit refresh, your page should rearrange itself.
+		$(document).ready(function() {
+			new_div.width(width);
+			new_div.height(height);
+
+			for(var i=0; i<imageArray.length; i++) {
+				imageArray[i]; 
+				console.log(imageArray[i]); 
+			}
+		});
+	</script>
+</body>
+</html>
+

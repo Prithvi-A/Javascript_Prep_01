@@ -1,0 +1,58 @@
+// Common styles for the page.
+
+body {
+	font-size: 18px;
+    line-height: 1.45;
+    font-weight: 400;
+    letter-spacing: normal;
+    background-color: #fff;
+    color: #333;
+    font-style: normal;
+}
+
+@mixin center {
+	text-align: center;
+}
+
+@mixin center-paragraph($width) {
+	width: $width;
+	margin: 0 auto;
+}
+
+@mixin viewport($viewport-name) {
+
+}
+
+.hero-text {
+	font-size: 64px;
+    line-height: 1.08654;
+    font-weight: 200;
+    letter-spacing: -0.014em;
+    text-align: center;
+}
+
+.subheadline-text {
+	font-size: 52px;
+    line-height: 1.08654;
+    font-weight: 200;
+    letter-spacing: -0.014em;
+    text-align: center;
+}
+
+.intro {
+	font-size: 24px;
+    line-height: 1.35417;
+    font-weight: 200;
+    letter-spacing: normal;
+}
+
+.section {
+	position: relative;
+	z-index: 1;
+	display: block;
+
+	.content {
+		margin: 0 auto;
+		width: 980px;
+	}
+}

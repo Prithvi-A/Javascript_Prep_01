@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pseudocode</title>
+</head>
+<body>
+	<div id="greeting"></div>
+	<script>
+
+		// If not a member OR age < 21 = address them as sir or ma'am and deny access. 
+		// Else greet them (Mr for Male)/ (Mrs for Female) + Name + Welcome message.
+		// If thirsty, prompt what drink would you like?
+		// If fav drink is Coor's Light - Kick them out, else tell them - Yes (name) one (drink) coming right up!
+			
+			var name = prompt("What is your name?");
+			var age = prompt("What is your age?");
+			var gender = prompt("What is your gender?");
+			var is_member = prompt("Are you a member? Yes or No");
+
+			// If not a member OR age < 21 = address them as sir or ma'am and deny access. 
+			if((is_member == "No") || (age < 21)) {
+				if(gender == "female") {
+					alert("Ma\'am, sorry you cannot access the club.");		
+				} else {
+					alert("Sir, sorry you cannot access the club.");
+				}
+			} else {
+				// Else greet them (Mr for Male)/ (Mrs for Female) + Name + Welcome message.
+				if(gender == "female") {
+					alert("Welcome Mrs. " + name + "!");
+				} else {
+					alert("Welcome Mr. " + name + "!");
+				}
+
+				// If thirsty, prompt what drink would you like?
+				var thirsty = prompt("Are you thirsty? Yes or No");
+
+				// If fav drink is Coor's Light - Kick them out, else tell them - Yes (name) one (drink) coming right up!
+				if(thirsty === "Yes" ) {
+					var drink_of_choice = prompt("What drink would you like?"); 
+					
+					if(drink_of_choice === "Coors Light") {
+						alert("You're out!");
+					}
+					else {
+						alert("Yes " + name + " one " + drink_of_choice + " coming right up!");
+					}
+				}
+			}
+	</script>
+</body>
+</html>

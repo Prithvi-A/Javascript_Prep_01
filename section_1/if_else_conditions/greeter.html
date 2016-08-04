@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Greeter</title>
+</head>
+<body>
+	<h1>Greeter!</h1>
+	<div id="greeting"></div>
+	<div><span id="hometown"></span></div>
+	<script>
+
+	/** Instructions: 
+	* 1. Create a fresh HTML document with correctly set up html, head, and body tags
+	* 2. Create a <div> with an id of greeting on your web page.
+	* 3. Prompt the user to enter their name. Set their response equal to a variable visitor_name.
+	* 4. Create a variable welcome_message and construct a welcoming message using their name.
+	* 5. Make your welcome message visible on the page using querySelector and textContent.
+	* 6. Prompt the user for their hometown and save their answer as a variable town
+	* 7. Put an empty <span> with the id of hometown on the page in the middle of an existing sentence already on the page letting them know how nice it is to 
+	*     have a visitor from blank.
+	* 8. Use the town variable and the #hometown span to make the compliment complete!
+	*/
+
+			var visitor_name = prompt("What is your name?");
+			var welcome_message = "Welcome " + visitor_name + '!';
+			document.querySelector('#greeting').textContent = welcome_message ;
+
+			var town = prompt("What is your hometown?");
+			document.querySelector('#hometown').textContent = 'It is so nice to have you from ' + town + '!';
+	</script>
+</body>
+</html>

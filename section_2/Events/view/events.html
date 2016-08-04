@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Events</title>
+</head>
+<style>
+	#target {
+		width: 300px;
+		height: 300px;
+	}
+	.highlighted {
+		background: yellow;
+	}
+	.show {
+		display: block;
+	}
+	.outer {
+		width: 114px;
+		height: 145px;
+		margin:0 auto;
+	}
+	#magic {
+		background-image: url('../114px-Margaret_Hamilton.gif');
+		background-repeat: no-repeat; 
+		width: 114px;
+		height: 145px;
+	}
+
+
+</style>
+<body>
+	<!-- <p><button id="beeper">Beeper</button></p> -->
+	<!-- <div> This is a div.</div> -->
+
+	<!-- <div><a href="#">Random Div</a></div> -->
+	
+	<div class="push_button">
+		<button id="show_money">Show me the money</button>
+		<div id="money" class="content" style="display: none;">
+			$1 Million
+		</div>
+	</div>
+	
+	<div class="push_button">
+		<button id="show_opera">Show me the Opera</button>
+		<div id="opera" class="content" style="display: none;">
+			Here is the Opera!
+		</div>
+	</div>
+
+	<div class="push_button">
+		<button id="show_oprah">Show me the Oprah</button>
+		<div id="oprah" class="content" style="display: none;">
+			Welcome to the Oprah show!
+		</div>
+	</div>
+
+	<p><a href="#" id="target">Element with id="target"</a></p>
+
+	<div class="outer">		
+		<div id="magic">
+		</div>
+	</div>
+
+	<input id="whichkey" value="type something">
+	<div id="log"></div>
+	
+	<script src="https://code.jquery.com/jquery-2.1.1.js"></script>		
+	<script type="text/javascript" src="../js/events.js"></script>
+</body>
+</html>
