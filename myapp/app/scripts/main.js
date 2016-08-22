@@ -20,7 +20,7 @@ $(document).ready(function() {
                     // Fetch the map image url of city
                     var map_url = 'https://maps.googleapis.com/maps/api/staticmap?center='+ $city + '&size=300x300';
                     // Insert the image on the HTML
-                    $('.map_display').append('<img src= "'+ map_url+ '"/>');
+                    $('.map_display').empty().append('<img src= "'+ map_url+ '"/>');
                });
             },
             error: function(){
