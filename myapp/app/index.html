@@ -28,19 +28,26 @@
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    
+ 
+    <!-- Main Wrapper -->
       <div class="container">
+        <!-- Main Panel -->
         <div class="panel panel-primary"> 
+            <!-- Main Heading -->
             <div class="panel-heading">
               <h3 class="panel-title">Find the Lat Long of a city</h3>
             </div>
+            <!-- Main Content -->
             <div class="panel-body">
               <div class="row">
+                <!-- Left Column -->
                 <div class="col-md-6 col-lg-6">
+                  <!-- Search Form -->
                   <form action="">
                     <input id="search_city" class="form-control" type="text" name="search" placeholder="Enter a city" />
                     <button id="submit_city" type="button" class="btn btn-primary" name="submit">Submit</button>
                   </form>
+                  <!-- Display latitude results -->
                   <div class="panel panel-primary"> 
                     <div class="panel-heading">
                       <h3 class="panel-title">Latitude</h3>
@@ -49,17 +56,17 @@
                        
                     </div>
                   </div>
+                  <!-- Display longitude results -->
                   <div class="panel panel-primary"> 
                     <div class="panel-heading">
                       <h3 class="panel-title">Longitude</h3>
                     </div>
-                    <div id="lng" class="panel-body">
-                      
-                    </div>
+                    <div id="lng" class="panel-body"></div>
                   </div>
                 </div>
-                <div id="results" class="col-md-6 col-lg-6">
-
+                <!-- Right Column -->
+                <div class="col-md-6 col-lg-6">
+                  <!-- Display map image -->
                   <div class="map_display"></div>
                 </div> 
               </div>
