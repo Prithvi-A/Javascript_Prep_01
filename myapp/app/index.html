@@ -5,7 +5,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
-    <title>Target : Expect More. Pay Less.</title>
+    <title>Google Maps API</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -23,127 +23,49 @@
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
+
   <body>
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
-
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><img alt="Brand" src="images/target_logo.png" width="30" height="30"></a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">categories <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">deals <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-          <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
+      <div class="container">
+        <div class="panel panel-primary"> 
+            <div class="panel-heading">
+              <h3 class="panel-title">Find the Lat Long of a city</h3>
             </div>
-            <button type="submit" class="btn btn-default">
-              <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-            </button>
-          </form>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">my Account <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-              </ul>
-            </li>
-            <li><a href="#">0 items <img src="images/target_cart.png" alt="target_cart" width="30" height="30"></a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-    <!-- /.nav -->
-   
-    <div class="jumbotron">
-      <p>Say Hello to</p>
-      <a href=""><img src="" alt="cat_jack_logo"></a>
-      <p class="subtitle">kids' clothing with an imagination of its own. only at Target.</p>
-      <button class="btn btn-default" type="button">shop now</button>
-    </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-6 col-lg-6">
+                  <form action="">
+                    <input id="search_city" class="form-control" type="text" name="search" placeholder="Enter a city" />
+                    <button id="submit_city" type="button" class="btn btn-primary" name="submit">Submit</button>
+                  </form>
+                  <div class="panel panel-primary"> 
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Latitude</h3>
+                    </div>
+                    <div id="lat" class="panel-body">
+                       
+                    </div>
+                  </div>
+                  <div class="panel panel-primary"> 
+                    <div class="panel-heading">
+                      <h3 class="panel-title">Longitude</h3>
+                    </div>
+                    <div id="lng" class="panel-body">
+                      
+                    </div>
+                  </div>
+                </div>
+                <div id="results" class="col-md-6 col-lg-6">
 
-    
-    <!-- /.jumbotron -->
-
-    <!-- <div class="container">
-      <div class="header">
-        <img class="pull-left" alt="logo"/>
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a href="#">categories</a></li>
-          <li><a href="#">deals</a></li>
-          <li>Search bar</li>
-          <li><a href="#">my Account</a></li>
-          <li><a href="#">0 items</a> <img src="cart.png" alt="shopping_cart"></li>
-        </ul>
-      </div>
-
-      <div class="jumbotron">
-        <h1>'hello there, 'Allo!</h1>
-        <p class="lead">Always a pleasure scaffolding your apps.</p>
-        <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-      </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>HTML5 Boilerplate</h4>
-          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
-          
-          <h4>Sass</h4>
-          <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
-          
-          <h4>Bootstrap</h4>
-          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
-          <h4>Modernizr</h4>
-          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-          
+                  <div class="map_display"></div>
+                </div> 
+              </div>
+            </div>   
         </div>
-      </div>
-
-      <div class="footer">
-        <p>♥ from the Yeoman team</p>
-      </div>
-    </div> -->
+      </div>  
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -178,6 +100,8 @@
     
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
+    <!-- <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script> -->
+
     <!-- endbuild -->
   </body>
 </html>
